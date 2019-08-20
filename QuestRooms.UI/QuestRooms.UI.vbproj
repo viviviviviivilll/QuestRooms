@@ -114,6 +114,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="MockData\Countries.sql" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
