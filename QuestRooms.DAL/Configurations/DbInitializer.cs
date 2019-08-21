@@ -17,7 +17,11 @@ namespace QuestRooms.DAL.Configurations
             dirPath = Path.GetDirectoryName(dirPath);
 
             context.Database.ExecuteSqlCommand(ReadFromFile(dirPath + "/MockData/Countries.sql"));
-            context.Database.ExecuteSqlCommand(ReadFromFile(dirPath + "/MockData/Countries.sql"));
+            context.Database.ExecuteSqlCommand(ReadFromFile(dirPath + "/MockData/Companies.sql"));
+            context.Database.ExecuteSqlCommand(ReadFromFile(dirPath + "/MockData/Streets.sql"));
+            context.Database.ExecuteSqlCommand(ReadFromFile(dirPath + "/MockData/Cities.sql"));
+            context.Database.ExecuteSqlCommand(ReadFromFile(dirPath + "/MockData/Addresses.sql"));
+            context.Database.ExecuteSqlCommand(ReadFromFile(dirPath + "/MockData/QuestRooms.sql"));
         }
 
 

@@ -5,6 +5,5 @@ insert into Countries (CountryName) values ('Portugal');
 insert into Countries (CountryName) values ('Philippines');
 insert into Countries (CountryName) values ('Kazakhstan');
 insert into Countries (CountryName) values ('Thailand');
-insert into Countries (CountryName) values ('China');
-insert into Countries (CountryName) values ('China');
 insert into Countries (CountryName) values ('Sweden');
+insert into Countries (CountryName) values ('USA');

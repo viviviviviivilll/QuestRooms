@@ -13,10 +13,9 @@ namespace TestConsoleProject
         {
             RoomsContext db = new RoomsContext();
 
-            foreach(var c in db.Countries)
-            {
-                Console.WriteLine(c.CountryName);
-            }
+            foreach(var c in db.QuestRooms)
+                Console.WriteLine($"{c.Name}");
         }
+
     }
 }
