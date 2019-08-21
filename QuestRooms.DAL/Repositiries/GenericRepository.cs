@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace QuestRooms.DAL.Repositiries
 {
-    class GenericRepository<TEntity> :
+    public class GenericRepository<TEntity> :
         IRepository<TEntity> where TEntity : class
     {
         private readonly DbContext context;

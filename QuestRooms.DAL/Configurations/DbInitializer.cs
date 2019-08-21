@@ -16,12 +16,13 @@ namespace QuestRooms.DAL.Configurations
             var dirPath = Assembly.GetExecutingAssembly().Location;
             dirPath = Path.GetDirectoryName(dirPath);
 
-            context.Database.ExecuteSqlCommand(ReadFromFile(dirPath + "/MockData/Countries.sql"));
-            context.Database.ExecuteSqlCommand(ReadFromFile(dirPath + "/MockData/Companies.sql"));
-            context.Database.ExecuteSqlCommand(ReadFromFile(dirPath + "/MockData/Streets.sql"));
-            context.Database.ExecuteSqlCommand(ReadFromFile(dirPath + "/MockData/Cities.sql"));
-            context.Database.ExecuteSqlCommand(ReadFromFile(dirPath + "/MockData/Addresses.sql"));
-            context.Database.ExecuteSqlCommand(ReadFromFile(dirPath + "/MockData/QuestRooms.sql"));
+            context.Database.ExecuteSqlCommand(ReadFromFile(@"C:\Users\Boiichuk\source\repos\QuestRooms\QuestRooms.DAL\MockData\Cities.sql"));
+            //context.Database.ExecuteSqlCommand(ReadFromFile(dirPath + "/MockData/Countries.sql"));
+            //context.Database.ExecuteSqlCommand(ReadFromFile(dirPath + "/MockData/Companies.sql"));
+            //context.Database.ExecuteSqlCommand(ReadFromFile(dirPath + "/MockData/Streets.sql"));
+            //context.Database.ExecuteSqlCommand(ReadFromFile(dirPath + "/MockData/Cities.sql"));
+            //context.Database.ExecuteSqlCommand(ReadFromFile(dirPath + "/MockData/Addresses.sql"));
+            //context.Database.ExecuteSqlCommand(ReadFromFile(dirPath + "/MockData/QuestRooms.sql"));
         }
 
 
