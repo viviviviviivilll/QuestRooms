@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <td>
+                    Name
+                </td>
+                <td>
+                    Description
+                </td>
+                <td>
+                    Duration
+                </td>
+                <td>
+                    Minimal Age
+                </td>
+                <td>
+                    Rating
+                </td>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var c in ViewBag.questRooms)
+            {
+                <tr>
+                    <td>
+                        @c.Name
+                    </td>
+                    <td>
+                        @c.Description
+                    </td>
+                    <td>
+                        @c.Duration
+                    </td>
+                    <td>
+                        @c.MinAge
+                    </td>
+                    <td>
+                        @c.Rating
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+

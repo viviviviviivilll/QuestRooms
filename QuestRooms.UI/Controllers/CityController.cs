@@ -18,8 +18,10 @@ namespace QuestRooms.UI.Controllers
         public string Index()
         {
             var city = cityService.GetAllCities().ToList();
-            string res = city.ElementAt(1).CityName;
+            string res = "";
+            foreach (var c in city)
+                res += $"{c.CityId} - {c.CityName} <br>"; 
             return res;
-        }
+        }// City_CityId
     }
 }

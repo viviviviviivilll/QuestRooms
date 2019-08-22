@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace QuestRooms.BLL.Services.Abstraction
 {
-    public interface ICityService
+    public interface IQuestRoomService
     {
-        ICollection<CityDto> GetAllCities();
+        ICollection<QuestRoomDto> GetAllQuestRooms();
     }
 }

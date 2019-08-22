@@ -1,0 +1,7 @@
+﻿body {
+}
+
+header, footer{
+    height: 50px;
+    background: yellow;
+}

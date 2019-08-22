@@ -14,6 +14,12 @@ namespace QuestRooms.BLL.Mapping
         public MapperProfile()
         {
             CreateMap<City, CityDto>();
+            CreateMap<Country, CountryDto>();
+            CreateMap<Company, CompanyDto>();
+            CreateMap<Street, StreetDto>();
+            CreateMap<Photo, PhotoDto>();
+            CreateMap<Address, AddressDto>();
+            CreateMap<QuestRoom, QuestRoomDto>();
         }
     }
 }

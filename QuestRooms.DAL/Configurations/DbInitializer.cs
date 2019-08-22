@@ -13,16 +13,13 @@ namespace QuestRooms.DAL.Configurations
     {
         protected override void Seed(RoomsContext context)
         {
-            var dirPath = Assembly.GetExecutingAssembly().Location;
-            dirPath = Path.GetDirectoryName(dirPath);
-
-            context.Database.ExecuteSqlCommand(ReadFromFile(@"C:\Users\Boiichuk\source\repos\QuestRooms\QuestRooms.DAL\MockData\Cities.sql"));
-            //context.Database.ExecuteSqlCommand(ReadFromFile(dirPath + "/MockData/Countries.sql"));
-            //context.Database.ExecuteSqlCommand(ReadFromFile(dirPath + "/MockData/Companies.sql"));
-            //context.Database.ExecuteSqlCommand(ReadFromFile(dirPath + "/MockData/Streets.sql"));
-            //context.Database.ExecuteSqlCommand(ReadFromFile(dirPath + "/MockData/Cities.sql"));
-            //context.Database.ExecuteSqlCommand(ReadFromFile(dirPath + "/MockData/Addresses.sql"));
-            //context.Database.ExecuteSqlCommand(ReadFromFile(dirPath + "/MockData/QuestRooms.sql"));
+            var path = System.AppDomain.CurrentDomain.BaseDirectory + @"\bin\MockData\";
+            context.Database.ExecuteSqlCommand(ReadFromFile(path + "Cities.sql"));
+            context.Database.ExecuteSqlCommand(ReadFromFile(path + "Countries.sql"));
+            context.Database.ExecuteSqlCommand(ReadFromFile(path + "Companies.sql"));
+            context.Database.ExecuteSqlCommand(ReadFromFile(path + "Streets.sql"));
+            context.Database.ExecuteSqlCommand(ReadFromFile(path + "Addresses.sql"));
+            context.Database.ExecuteSqlCommand(ReadFromFile(path + "QuestRooms.sql"));
         }
 
 

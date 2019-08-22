@@ -40,6 +40,7 @@ namespace QuestRooms.UI.App_Start
             builder.RegisterType<RoomsContext>().As<DbContext>();
             builder.RegisterGeneric(typeof(GenericRepository<>)).As(typeof(IRepository<>));
             builder.RegisterType<CityService>().As<ICityService>();
+            builder.RegisterType<QuestRoomService>().As<IQuestRoomService>();
         }
     }
 }
