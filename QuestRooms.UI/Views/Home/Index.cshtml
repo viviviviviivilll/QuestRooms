@@ -1,53 +1,34 @@
-﻿
+﻿@model List<QuestRooms.BLL.DtoModels.QuestRoomDto>
 @{
     ViewBag.Title = "Index";
 }
-
-<div>
-    <table class="table">
-        <thead>
-            <tr>
-                <td>
-                    Name
-                </td>
-                <td>
-                    Description
-                </td>
-                <td>
-                    Duration
-                </td>
-                <td>
-                    Minimal Age
-                </td>
-                <td>
-                    Rating
-                </td>
-
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var c in ViewBag.questRooms)
-            {
-                <tr>
-                    <td>
-                        @c.Name
-                    </td>
-                    <td>
-                        @c.Description
-                    </td>
-                    <td>
-                        @c.Duration
-                    </td>
-                    <td>
-                        @c.MinAge
-                    </td>
-                    <td>
-                        @c.Rating
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
+<div class="row">
+    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+        <div class="card">
+            <div class="card-header">
+                <p>@Model.ElementAt(0).Name</p>
+            </div>
+            <div class="card-body">
+                <div class="card-text">
+                    <span>
+                        <i class="fas fa-user"></i>
+                        @Model.ElementAt(0).MinAge-@Model.ElementAt(0).MaxPlayers Partisipants
+                    </span>
+                    <br />
+                    <span>
+                        <i class="far fa-star"></i>
+                        @Model.ElementAt(0).Rating/10
+                    </span>
+                    <br />
+                    <span>
+                        <i class="far fa-surprise"></i>
+                        @Model.ElementAt(0).FearLvl/10
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
 </div>
 
 

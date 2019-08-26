@@ -17,9 +17,7 @@ namespace QuestRooms.UI.Controllers
         }
         public ActionResult Index()
         {
-            ViewBag.questRooms = questRoomService.GetAllQuestRooms().ToList();
-
-            return View();
+            return View(questRoomService.GetAllQuestRooms().ToList());
         }
     }
 }
