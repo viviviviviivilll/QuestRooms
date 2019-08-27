@@ -17,7 +17,26 @@ namespace QuestRooms.UI.Controllers
         }
         public ActionResult Index()
         {
-            return View(questRoomService.GetAllQuestRooms().ToList());
+            var info = new ViewInformation
+            {
+                Rooms = questRoomService.GetAllQuestRooms().ToList(),
+                CountOfItems = questRoomService.GetAllQuestRooms().ToList().Count(),
+                CardBackgrounds = new List<string>() { "#8e44ad", "#e74c3c", "#2c3e50", "#5352ed", "#8e44ad", "#5352ed", "#e74c3c", "#2c3e50", "#5352ed", "#8e44ad" },
+                PageNumber = 1
+            };
+            return View(info);
         }
+        public string GetRoomInfo(int RoomId)
+        {
+            return "hello" + RoomId;
+        }
+    }
+
+    public class ViewInformation
+    {
+        public List<BLL.DtoModels.QuestRoomDto> Rooms { get; set; }
+        public int PageNumber { get; set; }
+        public int CountOfItems { get; set; }
+        public List<string> CardBackgrounds { get; set; }
     }
 }

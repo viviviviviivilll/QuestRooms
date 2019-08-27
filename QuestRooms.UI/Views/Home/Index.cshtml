@@ -1,34 +1,44 @@
-﻿@model List<QuestRooms.BLL.DtoModels.QuestRoomDto>
+﻿@model QuestRooms.UI.Controllers.ViewInformation
 @{
     ViewBag.Title = "Index";
 }
 <div class="row">
-    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
-        <div class="card">
-            <div class="card-header">
-                <p>@Model.ElementAt(0).Name</p>
-            </div>
-            <div class="card-body">
-                <div class="card-text">
-                    <span>
-                        <i class="fas fa-user"></i>
-                        @Model.ElementAt(0).MinAge-@Model.ElementAt(0).MaxPlayers Partisipants
-                    </span>
-                    <br />
-                    <span>
-                        <i class="far fa-star"></i>
-                        @Model.ElementAt(0).Rating/10
-                    </span>
-                    <br />
-                    <span>
-                        <i class="far fa-surprise"></i>
-                        @Model.ElementAt(0).FearLvl/10
-                    </span>
+
+    @foreach (var i in Model.Rooms)
+    {
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 roomCard">
+            <div class="card text-white">
+                <div class="card-header headerCard">
+                    <div class="card-title  textCard"> <strong>@i.Name</strong> </div>
+                </div>
+                <img class="card-img-top imagineCard" src="~/Content/Images/@i.Photos.ElementAt(0).Name" />
+                <div class="card-body bodyCard">
+                    <div class="card-text">
+                        <span>
+                            <i class="fas fa-user"></i>
+                            @i.MinPlayers-@i.MaxPlayers Partisipants
+                        </span>
+                        <br />
+                        <span>
+                            <i class="far fa-star"></i>
+                            @i.Rating/10
+                        </span>
+                        <br />
+                        <span>
+                            <i class="far fa-surprise"></i>
+                            @i.FearLvl/10
+                        </span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="btn btn-primary w-100" onclick="location.href='@Url.Action("GetRoomInfo","Home", new { RoomId = i.QuestRoomId})'">Information</div>
                 </div>
             </div>
         </div>
-    </div>
-    
+    }
+
+
+
 </div>
 
 

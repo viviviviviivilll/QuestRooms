@@ -21,5 +21,6 @@ namespace QuestRooms.BLL.DtoModels
         public int ComplexityLvl { get; set; }
         public string Telephone { get; set; }
         public string Logo { get; set; }
+        public ICollection<PhotoDto> Photos { get; set; }
     }
 }

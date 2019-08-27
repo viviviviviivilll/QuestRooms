@@ -83,6 +83,9 @@
     <Content Include="MockData\Countries.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="MockData\Photos.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="MockData\QuestRooms.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

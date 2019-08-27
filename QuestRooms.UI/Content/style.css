@@ -5,3 +5,24 @@ header, footer{
     height: 50px;
     background: yellow;
 }
+
+.roomCard{
+   padding-top: 15px;
+}
+
+.textCard{
+    text-align: center;
+    font-size:22px;
+}
+
+.imagineCard {
+    width: 100%;
+    height: 204px;
+}
+
+.bodyCard {
+    background: #70a1ff;
+}
+.headerCard {
+    background: #70a1ff;
+}

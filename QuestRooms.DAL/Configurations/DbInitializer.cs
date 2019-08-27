@@ -20,6 +20,7 @@ namespace QuestRooms.DAL.Configurations
             context.Database.ExecuteSqlCommand(ReadFromFile(path + "Streets.sql"));
             context.Database.ExecuteSqlCommand(ReadFromFile(path + "Addresses.sql"));
             context.Database.ExecuteSqlCommand(ReadFromFile(path + "QuestRooms.sql"));
+            context.Database.ExecuteSqlCommand(ReadFromFile(path + "Photos.sql"));
         }
 
 
