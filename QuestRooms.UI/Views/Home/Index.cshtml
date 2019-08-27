@@ -7,12 +7,12 @@
     @foreach (var i in Model.Rooms)
     {
         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 roomCard">
-            <div class="card text-white">
-                <div class="card-header headerCard">
+            <div class="card text-white" style="background: @Model.CardBackgrounds.ElementAt(i.FearLvl)">
+                <div class="card-header">
                     <div class="card-title  textCard"> <strong>@i.Name</strong> </div>
                 </div>
                 <img class="card-img-top imagineCard" src="~/Content/Images/@i.Photos.ElementAt(0).Name" />
-                <div class="card-body bodyCard">
+                <div class="card-body">
                     <div class="card-text">
                         <span>
                             <i class="fas fa-user"></i>

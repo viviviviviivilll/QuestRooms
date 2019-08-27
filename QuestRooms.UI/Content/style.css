@@ -1,13 +1,13 @@
 ﻿body {
 }
 
-header, footer{
-    height: 50px;
-    background: yellow;
+header, footer {
+    height: 100px;
+    background: #22a6b3;
 }
 
 .roomCard{
-   padding-top: 15px;
+   padding-top: 30px;
 }
 
 .textCard{
@@ -20,9 +20,13 @@ header, footer{
     height: 204px;
 }
 
-.bodyCard {
-    background: #70a1ff;
+.bodyDesign {
+    background: #7ed6df;
 }
-.headerCard {
-    background: #70a1ff;
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 30px;
 }
+

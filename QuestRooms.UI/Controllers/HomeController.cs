@@ -21,7 +21,7 @@ namespace QuestRooms.UI.Controllers
             {
                 Rooms = questRoomService.GetAllQuestRooms().ToList(),
                 CountOfItems = questRoomService.GetAllQuestRooms().ToList().Count(),
-                CardBackgrounds = new List<string>() { "#8e44ad", "#e74c3c", "#2c3e50", "#5352ed", "#8e44ad", "#5352ed", "#e74c3c", "#2c3e50", "#5352ed", "#8e44ad" },
+                CardBackgrounds = new List<string>() { "red", "#8c7ae6", "#2c3e50", "#5352ed", "#0fb9b1", "#5352ed", "#8c7ae6", "#2c3e50", "#5352ed", "#8e44ad", "#8e44ad" },
                 PageNumber = 1
             };
             return View(info);
